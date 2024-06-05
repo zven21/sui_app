@@ -15,7 +15,10 @@ function createWindow() {
   mainWindow.loadURL('https://piaoju.haozaiapp.com/login');
 }
 
-app.on('ready', createWindow);
+app.on('ready', () => {
+  app.setAppUserModelId('com.github.zven21.haozai');
+  createWindow
+});
 
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
