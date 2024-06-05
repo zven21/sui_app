@@ -1,9 +1,9 @@
 {
-  "name": "piaoju",
+  "name": "haozai",
   "version": "0.2.1",
   "private": true,
   "scripts": {
-    "electron-dev": "electron main.js",
+    "dev": "electron main.js",
     "dist": "electron-builder",
     "dist:win": "electron-builder --win",
     "dist:mac": "electron-builder --mac",
@@ -13,9 +13,7 @@
   "dependencies": {
   },
   "devDependencies": {
-    "concurrently": "^8.2.2",
     "electron": "^30.0.9",
-    "electron-builder": "^24.13.3",
-    "wait-on": "^7.2.0"
+    "electron-builder": "^24.13.3"
   }
 }
