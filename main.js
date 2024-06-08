@@ -5,6 +5,7 @@ function createWindow() {
   const mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
+    fullscreen: true,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
       contextIsolation: true,
@@ -15,7 +16,10 @@ function createWindow() {
   mainWindow.loadURL('https://piaoju.haozaiapp.com/login');
 }
 
-app.on('ready', createWindow);
+app.on('ready', () => {
+  app.setAppUserModelId('com.github.zven21.haozai');
+  createWindow
+});
 
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
